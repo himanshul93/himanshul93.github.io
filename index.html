@@ -1,1 +1,261 @@
-hello world
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Tic Tac Toe - Home</title>
+    <script src="Scripts/jquery-3.1.1.js"></script>
+    <link href="Styles/bootstrap.css" rel="stylesheet" />
+    <link href="Styles/indexStyle.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <form id="form1">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Tic Tac Toe Game</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#">Page 1</a></li>
+                        <li><a href="#">Page 2</a></li>
+                        <li><a href="#">Page 3</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <div class="container-fluid gameBox">
+            <div class="col-md-3">
+            </div>
+
+            <div class="col-md-6">
+                <div class="row rno" id="r1">
+                    <div class="btn-danger col-md-3 c1" id="1">
+                        <br />
+                    </div>
+                    <div class="btn-danger col-md-3 c1" id="2">
+                        <br />
+                    </div>
+                    <div class="btn-danger col-md-3 c1" id="3">
+                        <br />
+                    </div>
+                </div>
+                <div class="row r2 rno" id="r2">
+                    <div class="btn-danger col-md-3 c1" id="4">
+                        <br />
+                    </div>
+                    <div class="btn-danger col-md-3 c1" id="5">
+                        <br />
+                    </div>
+                    <div class="btn-danger col-md-3 c1" id="6">
+                        <br />
+                    </div>
+                </div>
+                <div class="row r2 rno" id="r3">
+                    <div class="btn-danger col-md-3 c1" id="7">
+                        <br />
+                    </div>
+                    <div class="btn-danger col-md-3 c1" id="8">
+                        <br />
+                    </div>
+                    <div class="btn-danger col-md-3 c1" id="9">
+                        <br />
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+            </div>
+
+
+        </div>
+
+
+
+    </form>
+
+    <script>
+        var counter = 0;
+
+        $(".btn-danger").click(function () {
+
+            counter++;
+            var $this = $(this);
+            //typing text on button
+            if (counter % 2 == 0) {
+                $this.text('O');
+            }
+            else {
+                $this.text('X');
+            }
+            //alligning text on button
+            $this.css("text-align", "center");
+            var colNo = $this.attr("id");
+            var rowNo = $this.parent().attr("id");
+            var win = false;
+            var iCount = 1;
+            var val1;
+            val1 = $("#" + rowNo + "").children().text();
+
+            //code for rows
+            if (val1 == "XXX" || val1 == "OOO") {
+                win = true;
+                $("#" + rowNo + "").children().removeClass("btn-danger");
+                $("#" + rowNo + "").children().addClass("btn-info");
+                win = true;
+                if (counter % 2 == 0) {
+                    alert("O Wins the Game.");
+                }
+                else
+                    alert("X Wins the Game");
+
+            }
+
+            // code for columns
+            if (colNo == 1 || colNo == 4 || colNo == 7) {
+                var val3 = $("#1").text();
+                var val4 = $("#4").text();
+                var val5 = $("#7").text();
+
+                if (val3 == val4) {
+                    if (val3 == val5) {
+                        $("#1").removeClass("btn-danger");
+                        $("#4").removeClass("btn-danger");
+                        $("#7").removeClass("btn-danger");
+                        $("#1").addClass("btn-info");
+                        $("#4").addClass("btn-info");
+                        $("#7").addClass("btn-info");
+                        win = true;
+                        if (counter % 2 == 0) {
+                            alert("O Wins the Game.");
+                        }
+                        else
+                            alert("X Wins the Game");
+                    }
+                }
+            }
+
+            if (colNo == 2 || colNo == 5 || colNo == 8) {
+                var val3 = $("#2").text();
+                var val4 = $("#5").text();
+                var val5 = $("#8").text();
+
+                if (val3 == val4) {
+                    if (val3 == val5) {
+                        $("#2").removeClass("btn-danger");
+                        $("#5").removeClass("btn-danger");
+                        $("#8").removeClass("btn-danger");
+                        $("#2").addClass("btn-info");
+                        $("#5").addClass("btn-info");
+                        $("#8").addClass("btn-info");
+                        win = true;
+                        if (counter % 2 == 0) {
+                            alert("O Wins the Game.");
+                        }
+                        else
+                            alert("X Wins the Game");
+                    }
+                }
+            }
+
+            if (colNo == 3 || colNo == 6 || colNo == 9) {
+                var val3 = $("#3").text();
+                var val4 = $("#6").text();
+                var val5 = $("#9").text();
+
+                if (val3 == val4) {
+                    if (val3 == val5) {
+                        $("#3").removeClass("btn-danger");
+                        $("#6").removeClass("btn-danger");
+                        $("#9").removeClass("btn-danger");
+                        $("#3").addClass("btn-info");
+                        $("#6").addClass("btn-info");
+                        $("#9").addClass("btn-info");
+                        win = true;
+                        if (counter % 2 == 0) {
+                            alert("O Wins the Game.");
+                        }
+                        else
+                            alert("X Wins the Game");
+                    }
+                }
+            }
+
+            //code for diagonals
+
+            var d1, d2, d3, d4, d5;
+
+            d1 = $("#1").text();
+            d2 = $("#3").text();
+            d3 = $("#5").text();
+            d4 = $("#7").text();
+            d5 = $("#9").text();
+
+            if (colNo == 1 || colNo == 5 || colNo == 9) {
+                if (d1 == d3) {
+                    if (d1 == d5) {
+                        $("#1").removeClass("btn-danger");
+                        $("#5").removeClass("btn-danger");
+                        $("#9").removeClass("btn-danger");
+                        $("#1").addClass("btn-info");
+                        $("#5").addClass("btn-info");
+                        $("#9").addClass("btn-info");
+                        win = true;
+                        if (counter % 2 == 0) {
+                            alert("O Wins the Game.");
+                        }
+                        else
+                            alert("X Wins the Game");
+                    }
+                }
+            }
+
+            if (colNo == 3 || colNo == 5 || colNo == 7) {
+                if (d2 == d3) {
+                    if (d2 == d4) {
+                        $("#3").removeClass("btn-danger");
+                        $("#5").removeClass("btn-danger");
+                        $("#7").removeClass("btn-danger");
+                        $("#3").addClass("btn-info");
+                        $("#5").addClass("btn-info");
+                        $("#7").addClass("btn-info");
+                        win = true;
+                        if (counter % 2 == 0) {
+                            alert("O Wins the Game.");
+                        }
+                        else
+                            alert("X Wins the Game");
+                    }
+                }
+            }
+
+            if (counter == 9) {
+                if (win == false)
+                    alert("Game Over");
+            }
+
+
+        });
+
+        $(document).ready(function () {
+            //$(".gameBox").css("margin-left", "25px");
+            $(".r2").css("margin-top", "10px");
+            $(".c1").css("margin-right", "10px");
+        });
+    </script>
+    <style>
+        
+    </style>
+</body>
+</html>
