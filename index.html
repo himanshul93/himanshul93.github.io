@@ -6,7 +6,7 @@
     <script src="jquery-3.1.1.js"></script>
     <link href="bootstrap.css" rel="stylesheet" />
     <link href="indexStyle.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
@@ -45,53 +45,53 @@
 
                 <div class="col-md-6 col-xs-6 col-sm-6">
                     <div class="row rno" id="r1">
-                        <div class="col-md-4 col-xs-4 col-sm-4" id="1">
-                            <button type="button" class="btn btn-danger col-md-12 col-xs-12 col-sm-12 c1">
+                        <div class="col-md-4 col-xs-4 col-sm-4">
+                            <button type="button" class="btn btnxo btn-danger col-md-12 col-xs-12 col-sm-12 c1" id="1">
                                 <br />
                             </button>
                         </div>
-                        <div class="col-md-4 col-xs-4 col-sm-4" id="2">
-                            <button type="button" class="btn btn-danger col-md-12 col-xs-12 col-sm-12 c1">
+                        <div class="col-md-4 col-xs-4 col-sm-4">
+                            <button type="button" class="btn btnxo btn-danger col-md-12 col-xs-12 col-sm-12 c1" id="2">
                                 <br />
                             </button>
                         </div>
-                        <div class="col-md-4 col-xs-4 col-sm-4" id="3">
-                            <button type="button" class="btn btn-danger col-md-12 col-xs-12 col-sm-12 c1">
+                        <div class="col-md-4 col-xs-4 col-sm-4">
+                            <button type="button" class="btn btnxo btn-danger col-md-12 col-xs-12 col-sm-12 c1" id="3">
                                 <br />
                             </button>
                         </div>
                     </div>
                     <div class="row r2 rno" id="r2">
-                        <div class="col-md-4 col-xs-4 col-sm-4" id="4">
-                            <button type="button" class="btn btn-danger col-md-12 col-xs-12 col-sm-12 c1">
+                        <div class="col-md-4 col-xs-4 col-sm-4">
+                            <button type="button" class="btn btnxo btn-danger col-md-12 col-xs-12 col-sm-12 c1" id="4">
                                 <br />
                             </button>
                         </div>
-                        <div class="col-md-4 col-xs-4 col-sm-4" id="5">
-                            <button type="button" class="btn btn-danger col-md-12 col-xs-12 col-sm-12 c1">
+                        <div class="col-md-4 col-xs-4 col-sm-4">
+                            <button type="button" class="btn btnxo btn-danger col-md-12 col-xs-12 col-sm-12 c1" id="5">
                                 <br />
                             </button>
                         </div>
-                        <div class="col-md-4 col-xs-4 col-sm-4" id="6">
-                            <button type="button" class="btn btn-danger col-md-12 col-xs-12 col-sm-12 c1">
+                        <div class="col-md-4 col-xs-4 col-sm-4">
+                            <button type="button" class="btn btnxo btn-danger col-md-12 col-xs-12 col-sm-12 c1" id="6">
                                 <br />
                             </button>
                         </div>
                     </div>
 
                     <div class="row r2 rno" id="r3">
-                        <div class="col-md-4 col-xs-4 col-sm-4" id="7">
-                            <button type="button" class="btn btn-danger col-md-12 col-xs-12 col-sm-12 c1">
+                        <div class="col-md-4 col-xs-4 col-sm-4">
+                            <button type="button" class="btn btnxo btn-danger col-md-12 col-xs-12 col-sm-12 c1" id="7">
                                 <br />
                             </button>
                         </div>
-                        <div class="col-md-4 col-xs-4 col-sm-4" id="8">
-                            <button type="button" class="btn btn-danger col-md-12 col-xs-12 col-sm-12 c1">
+                        <div class="col-md-4 col-xs-4 col-sm-4">
+                            <button type="button" class="btn btnxo btn-danger col-md-12 col-xs-12 col-sm-12 c1" id="8">
                                 <br />
                             </button>
                         </div>
-                        <div class="col-md-4 col-xs-4 col-sm-4" id="9">
-                            <button type="button" class="btn btn-danger col-md-12 col-xs-12 col-sm-12 c1">
+                        <div class="col-md-4 col-xs-4 col-sm-4">
+                            <button type="button" class="btn btnxo btn-danger col-md-12 col-xs-12 col-sm-12 c1" id="9">
                                 <br />
                             </button>
                         </div>
@@ -190,14 +190,14 @@
                         win = true;
                         if (counter % 2 == 0) {
                             oScore++;
-                            $(".oscore").val = oScore;
-                            $(".btn").addClass("disabled");
+                            $(".oscore").text(oScore);
+                            $(".btnxo").addClass("disabled");
                             alert("O Wins the Game.");
                         }
                         else {
                             xScore++;
-                            $(".xscore").val = xScore;
-                            $(".btn").addClass("disabled");
+                            $(".xscore").text(xScore);
+                            $(".btnxo").addClass("disabled");
                             alert("X Wins the Game");
                         }
 
@@ -221,14 +221,14 @@
                         win = true;
                         if (counter % 2 == 0) {
                             oScore++;
-                            $(".oscore").val = oScore;
-                            $(".btn").addClass("disabled");
+                            $(".oscore").text(oScore);
+                            $(".btnxo").addClass("disabled");
                             alert("O Wins the Game.");
                         }
                         else {
                             xScore++;
-                            $(".xscore").val = xScore;
-                            $(".btn").addClass("disabled");
+                            $(".xscore").text(xScore);
+                            $(".btnxo").addClass("disabled");
                             alert("X Wins the Game");
                         }
 
@@ -252,14 +252,14 @@
                         win = true;
                         if (counter % 2 == 0) {
                             oScore++;
-                            $(".oscore").val = oScore;
-                            $(".btn").addClass("disabled");
+                            $(".oscore").text(oScore);
+                            $(".btnxo").addClass("disabled");
                             alert("O Wins the Game.");
                         }
                         else {
                             xScore++;
-                            $(".xscore").val = xScore;
-                            $(".btn").addClass("disabled");
+                            $(".xscore").text(xScore);
+                            $(".btnxo").addClass("disabled");
                             alert("X Wins the Game");
                         }
 
@@ -289,14 +289,14 @@
                         win = true;
                         if (counter % 2 == 0) {
                             oScore++;
-                            $("oscore").val = oScore;
-                            $(".btn").addClass("disabled");
+                            $(".oscore").text(oScore);
+                            $(".btnxo").addClass("disabled");
                             alert("O Wins the Game.");
                         }
                         else {
                             xScore++;
-                            $(".xscore").val = xScore;
-                            $(".btn").addClass("disabled");
+                            $(".xscore").text(xScore);
+                            $(".btnxo").addClass("disabled");
                             alert("X Wins the Game");
 
                         }
@@ -316,14 +316,14 @@
                         win = true;
                         if (counter % 2 == 0) {
                             oScore++;
-                            $(".oscore").val = oScore;
-                            $(".btn").addClass("disabled");
+                            $(".oscore").text(oScore);
+                            $(".btnxo").addClass("disabled");
                             alert("O Wins the Game.");
                         }
                         else {
                             xScore++;
-                            $(".xscore").val = xScore;
-                            $(".btn").addClass("disabled");
+                            $(".xscore").text(xScore);
+                            $(".btnxo").addClass("disabled");
                             alert("X Wins the Game");
                         }
 
@@ -351,6 +351,10 @@
 
         $(".btnReset").click(function () {
             $(".btn").removeClass("disabled");
+            $(".btnxo").removeClass("btn-info");
+            $(".btnxo").addClass("btn-danger");
+            $(".btnxo").text("");
+            $(".btnxo").html("<br/>");
             $(".btn").button("reset");
             counter = 0;
         });
