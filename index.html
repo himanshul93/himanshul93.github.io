@@ -44,57 +44,43 @@
                 </div>
 
                 <div class="col-md-6 col-xs-6 col-sm-6">
+
                     <div class="row rno" id="r1">
-                        <div class="col-md-4 col-xs-4 col-sm-4">
-                            <button type="button" class="btn btnxo btn-danger col-md-12 col-xs-12 col-sm-12 c1" id="1">
-                                <br />
-                            </button>
-                        </div>
-                        <div class="col-md-4 col-xs-4 col-sm-4">
-                            <button type="button" class="btn btnxo btn-danger col-md-12 col-xs-12 col-sm-12 c1" id="2">
-                                <br />
-                            </button>
-                        </div>
-                        <div class="col-md-4 col-xs-4 col-sm-4">
-                            <button type="button" class="btn btnxo btn-danger col-md-12 col-xs-12 col-sm-12 c1" id="3">
-                                <br />
-                            </button>
-                        </div>
+                        <button type="button" class="btn btnxo btn-danger col-md-4 col-xs-4 col-sm-4 c1" id="1">
+                            <br />
+                        </button>
+
+                        <button type="button" class="btn btnxo btn-danger col-md-4 col-xs-4 col-sm-4 c1" id="2">
+                            <br />
+                        </button>
+
+                        <button type="button" class="btn btnxo btn-danger col-md-4 col-xs-4 col-sm-4 c1" id="3">
+                            <br />
+                        </button>
                     </div>
+
                     <div class="row r2 rno" id="r2">
-                        <div class="col-md-4 col-xs-4 col-sm-4">
-                            <button type="button" class="btn btnxo btn-danger col-md-12 col-xs-12 col-sm-12 c1" id="4">
-                                <br />
-                            </button>
-                        </div>
-                        <div class="col-md-4 col-xs-4 col-sm-4">
-                            <button type="button" class="btn btnxo btn-danger col-md-12 col-xs-12 col-sm-12 c1" id="5">
-                                <br />
-                            </button>
-                        </div>
-                        <div class="col-md-4 col-xs-4 col-sm-4">
-                            <button type="button" class="btn btnxo btn-danger col-md-12 col-xs-12 col-sm-12 c1" id="6">
-                                <br />
-                            </button>
-                        </div>
+                        <button type="button" class="btn btnxo btn-danger col-md-4 col-xs-4 col-sm-4 c1" id="4">
+                            <br />
+                        </button>
+                        <button type="button" class="btn btnxo btn-danger col-md-4 col-xs-4 col-sm-4 c1" id="5">
+                            <br />
+                        </button>
+                        <button type="button" class="btn btnxo btn-danger col-md-4 col-xs-4 col-sm-4 c1" id="6">
+                            <br />
+                        </button>
                     </div>
 
                     <div class="row r2 rno" id="r3">
-                        <div class="col-md-4 col-xs-4 col-sm-4">
-                            <button type="button" class="btn btnxo btn-danger col-md-12 col-xs-12 col-sm-12 c1" id="7">
-                                <br />
-                            </button>
-                        </div>
-                        <div class="col-md-4 col-xs-4 col-sm-4">
-                            <button type="button" class="btn btnxo btn-danger col-md-12 col-xs-12 col-sm-12 c1" id="8">
-                                <br />
-                            </button>
-                        </div>
-                        <div class="col-md-4 col-xs-4 col-sm-4">
-                            <button type="button" class="btn btnxo btn-danger col-md-12 col-xs-12 col-sm-12 c1" id="9">
-                                <br />
-                            </button>
-                        </div>
+                        <button type="button" class="btn btnxo btn-danger col-md-4 col-xs-4 col-sm-4 c1" id="7">
+                            <br />
+                        </button>
+                        <button type="button" class="btn btnxo btn-danger col-md-4 col-xs-4 col-sm-4 c1" id="8">
+                            <br />
+                        </button>
+                        <button type="button" class="btn btnxo btn-danger col-md-4 col-xs-4 col-sm-4 c1" id="9">
+                            <br />
+                        </button>
                     </div>
 
                     <!--<%--code for counter here--%>-->
@@ -148,7 +134,9 @@
             var win = false;
             var iCount = 1;
             var val1;
+
             val1 = $("#" + rowNo + "").children().text();
+
 
             //code for rows
             if (val1 == "XXX" || val1 == "OOO") {
@@ -158,15 +146,15 @@
                 win = true;
                 if (counter % 2 == 0) {
                     oScore++;
-                    $(".oscore").val = oScore;
-                    $(".btn").addClass("disabled");
+                    $(".oscore").text(oScore);
+                    $(".btnxo").addClass("disabled");
                     alert("O Wins the Game.");
 
                 }
                 else {
                     xScore++;
-                    $(".xscore").val = xScore;
-                    $(".btn").addClass("disabled");
+                    $(".xscore").text(xScore);
+                    $(".btnxo").addClass("disabled");
                     alert("X Wins the Game");
                 }
 
@@ -367,3 +355,5 @@
     </style>
 </body>
 </html>
+
+
